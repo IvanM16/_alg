@@ -16,13 +16,13 @@ def hanoi_recursive(n: int, src: str = 'A', aux: str = 'B', target: str = 'C') -
         print(f"Move disk 1 from {src} -> {target}")
         return
     
-    # Step 1: Move top n-1 disks from src to aux using target as temporary peg
+    
     hanoi_recursive(n - 1, src, target, aux)
     
-    # Step 2: Move the largest disk from src to target
+    
     print(f"Move disk {n} from {src} -> {target}")
     
-    # Step 3: Move n-1 disks from aux to target using src as temporary peg
+   
     hanoi_recursive(n - 1, aux, src, target)
 
 
@@ -36,9 +36,9 @@ def hanoi_iterative(n: int, src: str = 'A', aux: str = 'B', target: str = 'C') -
     if n <= 0:
         return
 
-    total_moves = (1 << n) - 1  # Equivalent to 2^n - 1
+    total_moves = (1 << n) - 1  
     
-    # Initialize stacks for pegs
+    
     pegs = {
         'A': list(range(n, 0, -1)),
         'B': [],
@@ -47,7 +47,7 @@ def hanoi_iterative(n: int, src: str = 'A', aux: str = 'B', target: str = 'C') -
     
     s, a, t = src, aux, target
     
-    # If number of disks is even, swap auxiliary and target destination sequence
+    
     if n % 2 == 0:
         a, t = t, a
 
