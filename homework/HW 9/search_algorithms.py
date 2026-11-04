@@ -1,12 +1,3 @@
-"""
-Advanced Search Algorithms Collection
-1. Rat in a Maze (DFS)
-2. Wolf, Goat, Cabbage River Crossing (BFS)
-3. 8-Queens Problem (DFS / Backtracking)
-4. NPC Pathfinding (A* Search)
-5. IC Circuit Routing (Lee's Algorithm / Wavefront BFS)
-"""
-
 from dataclasses import dataclass, field
 from typing import List, Tuple, Optional, Set, Dict
 import heapq
